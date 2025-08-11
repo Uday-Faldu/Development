@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="home.js"></script>
+
+    <script src="../Header/header.js"></script>
+    <script src="../Footer/footer.js"></script>
+  </head>
+  <body>
+    <div id="header"></div>
+
+    <div class="container">
+      <div class="slider">
+        <div class="container mt-5 mb-5">
+          <img src="/assests/Images/slider_home.png" class="w-100" alt="" />
+        </div>
+      </div>
+
+      <div class="d-flex align-items-center m-2">
+        <div
+          class="bg-danger rounded-1"
+          style="width: 22px; height: 45px"
+        ></div>
+        <h5 class="text-danger fw-semibold mb-0 ms-2">Our Products</h5>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="h1 fw-medium m-2 mt-3">Explore Our Products</div>
+    </div>
+
+    <!-- Products -->
+    <div class="container">
+      <div class="row" id="product-list"></div>
+    </div>
+
+    <div
+      class="all-product-btn d-flex justify-content-center align-items-center my-4"
+    >
+      <button class="btn btn-danger text-white">View All Products</button>
+    </div>
+    <div class="services d-flex justify-content-center text-center">
+      <div class="service-1 m-5">
+        <div
+          class="rounded-circle d-flex align-items-center justify-content-center"
+        >
+          <img src="/assests/Images/Services-1.png" alt="" />
+        </div>
+        <div class="h5 mt-4 fw-bold text-uppercase">Free and Fast Delivery</div>
+        <p class="text-muted small mb-0">
+          Free delivery for all orders over $140
+        </p>
+      </div>
+
+      <div class="service-2 m-5">
+        <div
+          class="rounded-circle d-flex align-items-center justify-content-center"
+        >
+          <img src="/assests/Images/Services-2.png" alt="" />
+        </div>
+        <div class="h5 mt-4 fw-bold text-uppercase">24/7 Customer Service</div>
+        <p class="text-muted small mb-0">Friendly 24/7 customer support</p>
+      </div>
+
+      <div class="service-3 m-5">
+        <div
+          class="rounded-circle d-flex align-items-center justify-content-center"
+        >
+          <img src="/assests/Images/Services-3.png" alt="" />
+        </div>
+        <div class="h5 mt-4 fw-bold text-uppercase">Money Back Guarantee</div>
+        <p class="text-muted small mb-0">We return money within 30 days</p>
+      </div>
+    </div>
+
+    <div id="footer"></div>
+
+    <script>
+      loadHeader();
+      loadFooter();
+    </script>
+  </body>
+</html>

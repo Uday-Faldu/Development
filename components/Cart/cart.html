@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="cart.js"></script>
+
+    <script src="../Header/header.js"></script>
+    <script src="../Footer/footer.js"></script>
+  </head>
+  <body>
+    <div id="header"></div>
+
+    <div class="container my-5">
+      <h2 class="mb-4">Your Cart</h2>
+
+      <div class="table-responsive">
+        <table class="table align-middle text-center">
+          <thead class="table-light">
+            <tr>
+              <th>Images</th>
+              <th>Product</th>
+              <th>Price</th>
+              <th>Quantity</th>
+              <th>Subtotal</th>
+              <th>Remove</th>
+            </tr>
+          </thead>
+          <tbody id="cart-body"></tbody>
+        </table>
+      </div>
+
+      <div class="d-flex justify-content-between align-items-center mt-4">
+        <a href="/components/Home/home.html" class="btn btn-outline-secondary"
+          >Return To Shop</a
+        >
+        <button class="btn btn-outline-dark" id="update-cart">
+          Update Cart
+        </button>
+      </div>
+
+      <div class="row mt-5">
+        <div class="col-md-6">
+          <div class="input-group mb-3 w-75">
+            <input type="text" class="form-control" placeholder="Coupon Code" />
+            <button class="btn btn-danger">Apply Coupon</button>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="border p-4">
+            <h5>Cart Total</h5>
+            <div class="d-flex justify-content-between">
+              <span>Subtotal:</span>
+              <strong id="subtotal-amount">$0</strong>
+            </div>
+            <div class="d-flex justify-content-between">
+              <span>Shipping:</span>
+              <strong>Free</strong>
+            </div>
+            <hr />
+            <div class="d-flex justify-content-between">
+              <span>Total:</span>
+              <strong id="total-amount">$0</strong>
+            </div>
+            <button class="btn btn-danger w-100 mt-3">
+              Proceed to Checkout
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="footer"></div>
+
+    <script>
+      loadHeader();
+      loadFooter();
+    </script>
+  </body>
+</html>
