@@ -10,6 +10,68 @@
     <script>
       loadHeader();
       loadFooter();
+
+      document.addEventListener("DOMContentLoaded", function () {
+        const form = document.querySelector("form");
+
+        form.addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          const username = form
+            .querySelector('input[type="text"]')
+            .value.trim();
+          const password = form
+            .querySelector('input[type="password"]')
+            .value.trim();
+
+          if (!username || !password) {
+            alert("Please enter both username and password.");
+            return;
+          }
+
+          const xhr = new XMLHttpRequest();
+          xhr.open("POST", "https://dummyjson.com/auth/login", true);
+          xhr.setRequestHeader("Content-Type", "application/json");
+
+          xhr.onload = function () {
+            if (xhr.status >= 200 && xhr.status < 300) {
+              try {
+                const data = JSON.parse(xhr.responseText);
+                if (data && data.id) {
+                  const userData = {
+                    username: username,
+                    password: password,
+                  };
+                  localStorage.setItem(
+                    "userCredentials",
+                    JSON.stringify(userData)
+                  );
+
+                  window.location.href = "./components/Home/home.html";
+                } else {
+                  alert(data.message || "Invalid username or password.");
+                }
+              } catch (err) {
+                alert("Error parsing server response.");
+              }
+            } else {
+              alert("Login request failed with status: " + xhr.status);
+            }
+          };
+
+          xhr.onerror = function () {
+            alert("Network error while trying to log in.");
+          };
+
+          xhr.send(
+            JSON.stringify({
+              username: username,
+              password: password,
+              expiresInMins: 30,
+            })
+          );
+        });
+      });
     </script>
 
     <style>

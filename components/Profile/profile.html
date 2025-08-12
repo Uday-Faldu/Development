@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="./profile.js"></script>
+    <script src="../Header/header.js"></script>
+    <script src="../Footer/footer.js"></script>
+  </head>
+  <body>
+    <div id="header"></div>
+
+    <div class="container">
+      <div class="row mt-5 mb-5">
+        <div class="col-3">
+          <div>
+            <h6 class="fw-bold">Manage My Account</h6>
+            <ul class="list-unstyled ms-5">
+              <li class="text-danger">My Profile</li>
+              <li class="text-muted">Address Book</li>
+              <li class="text-muted">My Payment Options</li>
+            </ul>
+
+            <h6 class="fw-bold mt-3">My Orders</h6>
+            <ul class="list-unstyled ms-5">
+              <li class="text-muted">My Returns</li>
+              <li class="text-muted">My Cancellations</li>
+            </ul>
+
+            <h6 class="fw-bold mt-3">My WishList</h6>
+          </div>
+        </div>
+
+        <div class="col-7 p-4 bg-white shadow-lg rounded">
+          <h5 class="text-danger mb-4">Edit Your Profile</h5>
+
+          <form>
+            <!-- Name Row -->
+            <div class="row mb-3">
+              <div class="col">
+                <label class="form-label">First Name</label>
+                <input type="text" class="form-control" value="" />
+              </div>
+              <div class="col">
+                <label class="form-label">Last Name</label>
+                <input type="text" class="form-control" value="" />
+              </div>
+            </div>
+
+            <!-- Email + Address -->
+            <div class="row mb-3">
+              <div class="col">
+                <label class="form-label">Email</label>
+                <input type="email" class="form-control" value="" />
+              </div>
+              <div class="col">
+                <label class="form-label">Address</label>
+                <input type="text" class="form-control" value="" />
+              </div>
+            </div>
+
+            <!-- Country, State, City -->
+            <div class="row mb-3">
+              <div class="col">
+                <label class="form-label">Country</label>
+                <input type="text" class="form-control" />
+              </div>
+              <div class="col">
+                <label class="form-label">State</label>
+                <input type="text" class="form-control" />
+              </div>
+              <div class="col">
+                <label class="form-label">City</label>
+                <input type="text" class="form-control" />
+              </div>
+            </div>
+
+            <!-- Gender -->
+            <div class="mb-3">
+              <label class="form-label d-block">Gender</label>
+              <div class="form-check form-check-inline">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="gender"
+                  id="male"
+                  value="Male"
+                />
+                <label class="form-check-label" for="male">Male</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="gender"
+                  id="female"
+                  value="Female"
+                />
+                <label class="form-check-label" for="female">Female</label>
+              </div>
+            </div>
+
+            <!-- Interests -->
+            <div class="mb-3">
+              <label class="form-label d-block">Interests</label>
+              <div class="form-check form-check-inline">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  id="gaming"
+                  value="Gaming"
+                />
+                <label class="form-check-label" for="gaming">Gaming</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  id="mobile"
+                  value="Mobile"
+                />
+                <label class="form-check-label" for="mobile">Mobile</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  id="laptop"
+                  value="Laptop"
+                />
+                <label class="form-check-label" for="laptop">Laptop</label>
+              </div>
+            </div>
+
+            <!-- Mobile Number -->
+            <div class="mb-3">
+              <label class="form-label">Mobile Number</label>
+              <input type="text" class="form-control" placeholder="" />
+            </div>
+
+            <!-- Password Changes -->
+            <div class="mb-2 fw-bold">Password Changes</div>
+            <div class="mb-3">
+              <input
+                type="password"
+                class="form-control"
+                placeholder="Current Password"
+              />
+            </div>
+            <div class="mb-3">
+              <input
+                type="password"
+                class="form-control"
+                placeholder="New Password"
+              />
+            </div>
+            <div class="mb-3">
+              <input
+                type="password"
+                class="form-control"
+                placeholder="Confirm New Password"
+              />
+            </div>
+
+            <!-- Buttons -->
+            <div class="d-flex justify-content-end align-items-center mt-4">
+              <button type="button" class="btn btn-link text-dark me-3">
+                Cancel
+              </button>
+              <button type="submit" class="btn btn-danger">Save Changes</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div id="footer"></div>
+
+    <script>
+      loadHeader();
+      loadFooter();
+    </script>
+  </body>
+</html>

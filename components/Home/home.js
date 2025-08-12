@@ -12,7 +12,6 @@ function getStars(rating) {
 let favorites = JSON.parse(localStorage.getItem("favorites")) || [];
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
-
 fetch("products.json")
   .then((res) => res.json())
   .then((products) => {
@@ -54,7 +53,7 @@ fetch("products.json")
             </div>
             
             <!-- Add to Cart Button -->
-            <div class="card-footer bg-transparent border-0 invisible w-100 add-to-cart-footer">
+           <div class="card-footer bg-transparent border-0 fade w-100 add-to-cart-footer" style="transition: opacity 0.6s ease;">
               <button class="btn btn-dark w-100 add-to-cart-btn" data-product='${JSON.stringify(
                 product
               )}'>Add to Cart</button>
@@ -65,19 +64,18 @@ fetch("products.json")
       })
       .join("");
 
-
     document.querySelectorAll(".card").forEach((card) => {
       card.addEventListener("mouseenter", function () {
-        this.querySelector(".add-to-cart-footer").classList.remove("invisible");
+        this.querySelector(".add-to-cart-footer").classList.add("show");
+
         this.querySelector(".position-absolute").style.display = "flex";
       });
       card.addEventListener("mouseleave", function () {
-        this.querySelector(".add-to-cart-footer").classList.add("invisible");
+        this.querySelector(".add-to-cart-footer").classList.remove("show");
+
         this.querySelector(".position-absolute").style.display = "none";
       });
     });
-
-
 
     document.addEventListener("click", function (e) {
       const heartBtn = e.target.closest(".heart-btn");
@@ -102,7 +100,6 @@ fetch("products.json")
       }
     });
 
-    
     document.addEventListener("click", function (e) {
       const cartBtn = e.target.closest(".add-to-cart-btn");
       if (cartBtn) {

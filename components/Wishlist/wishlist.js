@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", () => {
-
   let favorites = JSON.parse(localStorage.getItem("favorites")) || [];
 
   const container = document.createElement("div");
@@ -57,7 +56,6 @@ document.addEventListener("DOMContentLoaded", () => {
     )
     .join("");
 
-
   document.addEventListener("click", function (e) {
     const traceBtn = e.target.closest(".trace-btn");
     if (traceBtn) {
@@ -67,7 +65,6 @@ document.addEventListener("DOMContentLoaded", () => {
       traceBtn.closest(".col-md-3").remove();
     }
   });
-
 
   document.addEventListener("click", function (e) {
     const cartBtn = e.target.closest(".add-to-cart-btn");
@@ -79,8 +76,6 @@ document.addEventListener("DOMContentLoaded", () => {
       let cart = JSON.parse(localStorage.getItem("cart")) || [];
       cart.push(product);
       localStorage.setItem("cart", JSON.stringify(cart));
-
-      alert(`${product.name} added to cart`);
     }
   });
 });

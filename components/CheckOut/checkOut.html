@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="./checkOut.js"></script>
+    <script src="../Header/header.js"></script>
+    <script src="../Footer/footer.js"></script>
+  </head>
+  <body>
+    <div id="header"></div>
+
+    <div class="container mt-5">
+      <div class="row mb-5">
+        <div class="col-md-6">
+          <h2>Billing Details</h2>
+          <form>
+            <div class="mb-3">
+              <label class="form-label"
+                >First Name<span class="text-danger">*</span></label
+              >
+              <input type="text" class="form-control w-75 bg-light" />
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label">Company Name</label>
+              <input type="text" class="form-control w-75 bg-light" />
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label"
+                >Street Address<span class="text-danger">*</span></label
+              >
+              <input type="text" class="form-control w-75 bg-light" />
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label"
+                >Apartment, floor, etc. (optional)</label
+              >
+              <input type="text" class="form-control w-75 bg-light" />
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label"
+                >Town/City<span class="text-danger">*</span></label
+              >
+              <input type="text" class="form-control w-75 bg-light" />
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label"
+                >Phone Number<span class="text-danger">*</span></label
+              >
+              <input type="tel" class="form-control w-75 bg-light" />
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label"
+                >Email Address<span class="text-danger">*</span></label
+              >
+              <input type="email" class="form-control w-75 bg-light" />
+            </div>
+
+            <div class="form-check mt-3">
+              <input
+                class="form-check-input bg-danger border-danger"
+                type="checkbox"
+                id="saveInfo"
+              />
+              <label class="form-check-label" for="saveInfo">
+                Save this information for faster check-out next time
+              </label>
+            </div>
+          </form>
+        </div>
+
+        <div class="col-6">
+          <div id="cart-summary" class="me-5 mt-5"></div>
+        </div>
+      </div>
+    </div>
+    <div id="footer"></div>
+
+    <script>
+      loadHeader();
+      loadFooter();
+    </script>
+  </body>
+</html>
