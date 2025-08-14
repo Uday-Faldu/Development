@@ -1,7 +1,6 @@
 function loadFooter() {
-  // Calculate relative path to footer.html from current location
   let path = window.location.pathname;
-  let depth = path.split("/").length - 2; // -2: remove empty and file name
+  let depth = path.split("/").length - 2; 
   let rel = "";
   for (let i = 0; i < depth; i++) rel += "../";
   let footerPath = rel + "components/Footer/footer.html";

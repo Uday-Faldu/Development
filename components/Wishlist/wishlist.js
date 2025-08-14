@@ -3,8 +3,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const container = document.createElement("div");
   container.className = "container mt-5";
-  document.body.insertBefore(container, document.getElementById("footer"));
-
+   const wishlistProduct = document.getElementById("wishlistProduct");
+  wishlistProduct.appendChild(container);
   if (favorites.length === 0) {
     container.innerHTML = `<div class="text-center text-muted my-5">
       <i class="fa-regular fa-heart fa-3x mb-3"></i>

@@ -27,7 +27,7 @@
       >
         <div class="flex-grow-1 text-center small">
           Summer Sale For All Swim Suits And Free Express Delivery OFF 50%!
-          <a href="" class="text-white"><b>ShopNow</b></a>
+          <a href="#" class="text-white"><b>ShopNow</b></a>
         </div>
         <div class="me-4 small">
           English <i class="fa-solid fa-chevron-down"></i>
@@ -64,9 +64,8 @@
             </ul>
           </div>
           <div
-            class="col-4 d-flex align-items-center justify-content  -end gap-3"
+            class="col-4 d-flex align-items-center justify-content-end gap-3"
           >
-            <!-- Search Bar -->
             <div
               class="position-relative"
               style="max-width: 250px; width: 100%"
@@ -88,27 +87,41 @@
               ></i>
             </div>
 
-            <!-- Wishlist icon -->
-            <a href="/components/Wishlist/wishlist.html" class="text-dark fs-5">
-              <i class="fa-regular fa-heart"></i>
-            </a>
-
-            <!-- Cart icon (outline) -->
             <a
-              href="/components/Cart/cart.html"
+              id="wishlist-link"
+              href="/components/Wishlist/wishlist.html"
               class="text-dark fs-5 position-relative"
             >
-              <i class="fa-solid fa-cart-shopping"></i>
+              <i class="fa-regular fa-heart"></i>
               <span
+                id="wishlist-count"
                 class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
-                style="font-size: 0.7rem"
+                style="font-size: 0.7rem; display: none"
               >
                 0
               </span>
             </a>
 
-            <!-- Profile icon -->
-            <a href="/components/Profile/profile.html" class="text-dark fs-5">
+            <a
+              id="cart-link"
+              href="/components/Cart/cart.html"
+              class="text-dark fs-5 position-relative"
+            >
+              <i class="fa-solid fa-cart-shopping"></i>
+              <span
+                id="cart-count"
+                class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+                style="font-size: 0.7rem; display: none"
+              >
+                0
+              </span>
+            </a>
+
+            <a
+              id="profile-link"
+              href="/components/Profile/profile.html"
+              class="text-dark fs-5"
+            >
               <i class="fa-regular fa-user"></i>
             </a>
           </div>

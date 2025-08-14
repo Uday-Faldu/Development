@@ -38,14 +38,7 @@
               try {
                 const data = JSON.parse(xhr.responseText);
                 if (data && data.id) {
-                  const userData = {
-                    username: username,
-                    password: password,
-                  };
-                  localStorage.setItem(
-                    "userCredentials",
-                    JSON.stringify(userData)
-                  );
+                  localStorage.setItem("userData", JSON.stringify(data));
 
                   window.location.href = "./components/Home/home.html";
                 } else {
@@ -111,7 +104,7 @@
                 <div class="mb-3">
                   <input
                     type="text"
-                    class="form-control login-input px-0"
+                    class="form-control px-0"
                     placeholder="Email or Phone Number"
                     autocomplete="username"
                   />
@@ -119,7 +112,7 @@
                 <div class="mb-4">
                   <input
                     type="password"
-                    class="form-control login-input px-0"
+                    class="form-control px-0"
                     placeholder="Password"
                     autocomplete="current-password"
                   />
